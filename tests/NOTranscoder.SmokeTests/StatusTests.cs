@@ -3,7 +3,7 @@ using NUnit.Framework;
 
 namespace NOTranscoder.SmokeTests
 {
-    public class SmokeTests
+    public class StatusTests
     {
         string STATUS_URL = "http://nginx/status";
 
