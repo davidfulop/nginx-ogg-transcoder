@@ -2,7 +2,7 @@ version: '2'
 services:
   nginx:
     container_name: nginx
-    image: nginx:1.13.9-alpine
+    image: openresty/openresty:xenial
     volumes:
       - ./nginx:/etc/nginx/conf.d
     links:
