@@ -5,6 +5,8 @@ services:
     image: nginx:1.13.9-alpine
     volumes:
       - ./nginx:/etc/nginx/conf.d
+    links:
+      - test-server
   smoke-tests:
     container_name: notranscoder-smoketests
     build: 
@@ -12,3 +14,8 @@ services:
       context: .
     links:
       - nginx
+  test-server:
+    container_name: notranscoder-testserver
+    build:
+      dockerfile: TestServer.Dockerfile
+      context: .
