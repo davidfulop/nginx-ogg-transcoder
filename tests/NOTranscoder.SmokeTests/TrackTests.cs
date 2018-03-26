@@ -20,7 +20,7 @@ namespace NOTranscoder.SmokeTests
             
             Assert.AreEqual(HttpStatusCode.OK, response.StatusCode);
             Assert.IsNotNull(responseStream);
-            Assert.IsTrue(x.Length > 2 * 1024 * 1024);
+            Assert.IsTrue(x.Length > 1024 * 1024);
         }
     }
 }
