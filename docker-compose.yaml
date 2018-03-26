@@ -2,7 +2,11 @@ version: '2'
 services:
   nginx:
     container_name: nginx
-    image: openresty/openresty:xenial
+    build:
+      dockerfile: OpenRestyOgg.Dockerfile
+      context: .
+    ports:
+      - 80:80
     volumes:
       - ./nginx:/etc/nginx/conf.d
     links:
