@@ -289,3 +289,6 @@ __pycache__/
 
 # media asset types
 *.flac
+
+# note files
+*.notes
